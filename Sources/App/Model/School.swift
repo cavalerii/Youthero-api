@@ -12,7 +12,21 @@ final class School: Model, Content {
     var name: String
     
     @Field(key: .address)
-    var address: String    
+    var address: String
+    
+    struct Public: Content {
+        var name: String
+        var address: String
+    }
+    
+    init(school: School.Public) {
+        self.name = school.name
+        self.address = school.address
+    }
+    
+    init() {
+        
+    }
 }
 
 extension FieldKey {
