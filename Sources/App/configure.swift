@@ -12,6 +12,9 @@ public func configure(_ app: Application) throws {
     
     // MARK: - Migrations
     app.migrations.add(AddStudents())
+    app.migrations.add(AddSchools())
+    app.migrations.add(AddTeachers())
+    app.migrations.add(AddReviews())
     try app.autoMigrate().wait()
     
     try routes(app)

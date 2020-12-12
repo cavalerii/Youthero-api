@@ -4,8 +4,6 @@ import Fluent
 import Crypto
 
 final class Teacher: Model, Content {
- 
-    
     static let schema = "teachers"
     
     @ID(key: .id)
