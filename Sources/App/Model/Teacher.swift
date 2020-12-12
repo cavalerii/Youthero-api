@@ -30,6 +30,4 @@ final class Teacher: Model, Content {
         var firstName: String
         var lastName: String
     }
-    
-
 }

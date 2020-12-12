@@ -8,4 +8,10 @@ func routes(_ app: Application) throws {
     
     let schoolsController = SchoolsController()
     try app.register(collection: schoolsController)
+    
+    let reviewsController = ReviewsController()
+    try app.register(collection: reviewsController)
+    
+    let studentsController = StudentsController()
+    try app.register(collection: studentsController)
 }

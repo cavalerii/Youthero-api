@@ -17,6 +17,19 @@ final class Student: Model, Content {
     @Children(for: \.$user)
     var reviews: [Review]
     
+    init(item: Student.Public) {
+        self.firstName = item.firstName
+        self.lastName = item.lastName
+    }
+    
+    init() {
+        
+    }
+    
+    struct Public: Content {
+        var firstName: String
+        var lastName: String
+    }
 }
 
 extension FieldKey {
